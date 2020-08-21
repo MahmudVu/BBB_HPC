@@ -1,0 +1,232 @@
+******************************************************************************
+                  TI ARM Linker PC v20.2.2                     
+******************************************************************************
+>> Linked Wed Aug 19 13:48:44 2020
+
+OUTPUT FILE NAME:   <../../../../../../../binary/armv7a/cgt_ccs/am335x/beaglebone/gpio/Debug/gpioLEDBlink.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 40300fc4
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  SRAM                  402f0400   0000fc00  00000000  0000fc00  RWIX
+  L3OCMC0               40300000   00010000  00001880  0000e780  RWIX
+  M3SHUMEM              44d00000   00004000  00000000  00004000  RWIX
+  M3SHDMEM              44d80000   00002000  00000000  00002000  RWIX
+  DDR0                  80000000   40000000  00000000  40000000  RWIX
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+40300000    40300000    0000106c   0000106c    r-x
+  40300000    40300000    0000106c   0000106c    r-x .text
+40301070    40301070    00000800   00000000    rw-
+  40301070    40301070    00000800   00000000    rw- .stack
+40301870    40301870    00000014   00000014    r--
+  40301870    40301870    00000014   00000014    r-- .const
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.text      0    40300000    0000106c     
+                  40300000    00000b50     drivers.lib : gpio_v2.obj (.text)
+                  40300b50    0000026c     gpioLEDBlink.obj (.text)
+                  40300dbc    000001a0     platform.lib : gpio.obj (.text)
+                  40300f5c    00000068     rtsv7A8_A_le_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  40300fc4    0000003c                           : boot_non_cortex_m.asm.obj (.text)
+                  40301000    00000038     temp.obj (.text)
+                  40301038    00000020     rtsv7A8_A_le_eabi.lib : args_main.c.obj (.text:_args_main)
+                  40301058    00000008                           : pre_init.c.obj (.text:_system_pre_init)
+                  40301060    00000008                           : exit.c.obj (.text:abort:abort)
+                  40301068    00000004                           : mpu_init.c.obj (.text:__mpu_init)
+
+.stack     0    40301070    00000800     UNINITIALIZED
+                  40301070    00000800     --HOLE--
+
+.const     0    40301870    00000014     
+                  40301870    00000014     gpioLEDBlink.obj (.const:$P$T0$1)
+
+.cinit     0    40300000    00000000     UNINITIALIZED
+
+.init_array 
+*          0    40300000    00000000     UNINITIALIZED
+
+__llvm_prf_cnts 
+*          0    40300000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                      code   ro data   rw data
+       ------                      ----   -------   -------
+    .\
+       gpioLEDBlink.obj            620    20        0      
+       temp.obj                    56     0         0      
+    +--+---------------------------+------+---------+---------+
+       Total:                      676    20        0      
+                                                           
+    ../../../../../../../binary/armv7a/cgt_ccs/am335x/beaglebone/platform/Debug/platform.lib
+       gpio.obj                    416    0         0      
+    +--+---------------------------+------+---------+---------+
+       Total:                      416    0         0      
+                                                           
+    ../../../../../../../binary/armv7a/cgt_ccs/am335x/drivers/Debug/drivers.lib
+       gpio_v2.obj                 2896   0         0      
+    +--+---------------------------+------+---------+---------+
+       Total:                      2896   0         0      
+                                                           
+    C:\ti\ccs1010\ccs\tools\compiler\ti-cgt-arm_20.2.2.LTS\lib\rtsv7A8_A_le_eabi.lib
+       autoinit.c.obj              104    0         0      
+       boot_non_cortex_m.asm.obj   60     0         0      
+       args_main.c.obj             32     0         0      
+       exit.c.obj                  8      0         0      
+       pre_init.c.obj              8      0         0      
+       mpu_init.c.obj              4      0         0      
+    +--+---------------------------+------+---------+---------+
+       Total:                      216    0         0      
+                                                           
+       Stack:                      0      0         2048   
+    +--+---------------------------+------+---------+---------+
+       Grand Total:                4204   20        2048   
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                          
+-------   ----                          
+40301060  C$$EXIT                       
+40300dcc  GPIO0ModuleClkConfig          
+40300e84  GPIO1ModuleClkConfig          
+40300dbc  GPIO1Pin23PinMuxSetup         
+40300eec  GPIO1PinMuxSetup              
+40300970  GPIOAutoIdleModeControl       
+40300a3c  GPIODebounceFuncControl       
+40300a8c  GPIODebounceTimeConfig        
+403000dc  GPIODirModeGet                
+4030007c  GPIODirModeSet                
+403009f8  GPIOGatingRatioConfigure      
+403009b4  GPIOIdleModeConfigure         
+40300628  GPIOIntTypeGet                
+40300288  GPIOIntTypeSet                
+40300058  GPIOModuleDisable             
+40300034  GPIOModuleEnable              
+40300000  GPIOModuleReset               
+403001c4  GPIOMultiplePinsRead          
+40300194  GPIOMultiplePinsWrite         
+4030076c  GPIOPinIntClear               
+40300238  GPIOPinIntDisable             
+403001e8  GPIOPinIntEnable              
+40300708  GPIOPinIntStatus              
+40300910  GPIOPinIntWakeUpDisable       
+403008b0  GPIOPinIntWakeUpEnable        
+4030016c  GPIOPinRead                   
+4030011c  GPIOPinWrite                  
+403007bc  GPIORawIntStatus              
+40300ab0  GPIORevisionInfoGet           
+40300818  GPIOTriggerPinInt             
+4030088c  GPIOWakeupGlobalDisable       
+40300868  GPIOWakeupGlobalEnable        
+40300f0c  GpioPinMuxSetup               
+40301870  __STACK_END                   
+00000800  __STACK_SIZE                  
+UNDEFED   __TI_CINIT_Base               
+UNDEFED   __TI_CINIT_Limit              
+UNDEFED   __TI_Handler_Table_Base       
+UNDEFED   __TI_Handler_Table_Limit      
+40300f5c  __TI_auto_init_nobinit_nopinit
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+40300000  __TI_static_base__            
+ffffffff  __binit__                     
+ffffffff  __c_args__                    
+40301068  __mpu_init                    
+40301070  __stack                       
+40300000  __start___llvm_prf_cnts       
+40300000  __stop___llvm_prf_cnts        
+40301038  _args_main                    
+40300fc4  _c_int00                      
+UNDEFED   _system_post_cinit            
+40301058  _system_pre_init              
+40301060  abort                         
+ffffffff  binit                         
+40300b0c  gpioContextRestore            
+40300ac8  gpioContextSave               
+40300ccc  main                          
+40300b50  quicksort                     
+40301000  temp                          
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                          
+-------   ----                          
+00000800  __STACK_SIZE                  
+40300000  GPIOModuleReset               
+40300000  __TI_static_base__            
+40300000  __start___llvm_prf_cnts       
+40300000  __stop___llvm_prf_cnts        
+40300034  GPIOModuleEnable              
+40300058  GPIOModuleDisable             
+4030007c  GPIODirModeSet                
+403000dc  GPIODirModeGet                
+4030011c  GPIOPinWrite                  
+4030016c  GPIOPinRead                   
+40300194  GPIOMultiplePinsWrite         
+403001c4  GPIOMultiplePinsRead          
+403001e8  GPIOPinIntEnable              
+40300238  GPIOPinIntDisable             
+40300288  GPIOIntTypeSet                
+40300628  GPIOIntTypeGet                
+40300708  GPIOPinIntStatus              
+4030076c  GPIOPinIntClear               
+403007bc  GPIORawIntStatus              
+40300818  GPIOTriggerPinInt             
+40300868  GPIOWakeupGlobalEnable        
+4030088c  GPIOWakeupGlobalDisable       
+403008b0  GPIOPinIntWakeUpEnable        
+40300910  GPIOPinIntWakeUpDisable       
+40300970  GPIOAutoIdleModeControl       
+403009b4  GPIOIdleModeConfigure         
+403009f8  GPIOGatingRatioConfigure      
+40300a3c  GPIODebounceFuncControl       
+40300a8c  GPIODebounceTimeConfig        
+40300ab0  GPIORevisionInfoGet           
+40300ac8  gpioContextSave               
+40300b0c  gpioContextRestore            
+40300b50  quicksort                     
+40300ccc  main                          
+40300dbc  GPIO1Pin23PinMuxSetup         
+40300dcc  GPIO0ModuleClkConfig          
+40300e84  GPIO1ModuleClkConfig          
+40300eec  GPIO1PinMuxSetup              
+40300f0c  GpioPinMuxSetup               
+40300f5c  __TI_auto_init_nobinit_nopinit
+40300fc4  _c_int00                      
+40301000  temp                          
+40301038  _args_main                    
+40301058  _system_pre_init              
+40301060  C$$EXIT                       
+40301060  abort                         
+40301068  __mpu_init                    
+40301070  __stack                       
+40301870  __STACK_END                   
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+ffffffff  __binit__                     
+ffffffff  __c_args__                    
+ffffffff  binit                         
+UNDEFED   __TI_CINIT_Base               
+UNDEFED   __TI_CINIT_Limit              
+UNDEFED   __TI_Handler_Table_Base       
+UNDEFED   __TI_Handler_Table_Limit      
+UNDEFED   _system_post_cinit            
+
+[61 symbols]
